@@ -1,0 +1,76 @@
+1. Identificación de las entidades principales y sus atributos
+
+Basándonos en los requisitos funcionales del caso de estudio, identificamos las siguientes entidades principales:
+
+1.1 Entidad: Vehículo
+Atributos:
+•	Matrícula (PK)
+•	Marca
+•	Modelo
+•	Tipo de vehículo (camión, furgoneta, etc.)
+•	Año de fabricación
+•	Kilometraje
+•	Capacidad de carga
+•	Fecha de la última revisión
+•	Estado (operativo, en mantenimiento, averiado)
+•	Consumo de combustible
+•	Historial de mantenimiento
+
+1.2 Entidad: Conductor
+Atributos:
+•	DNI/NIE (PK)
+•	Nombre
+•	Apellidos
+•	Número de licencia
+•	Fecha de caducidad de la licencia
+•	Historial de conducción
+•	Información de contacto
+
+1.3 Entidad: Ruta
+Atributos:
+•	ID_Ruta (PK)
+•	Origen
+•	Destino
+•	Distancia
+•	Tiempo estimado de viaje
+•	Estado (planificada, en curso, completada)
+•	Fecha de inicio
+•	Fecha de finalización
+
+1.4 Entidad: Mantenimiento
+Atributos:
+•	ID_Mantenimiento (PK)
+•	Vehículo (FK)
+•	Tipo de mantenimiento
+•	Fecha de inicio
+•	Fecha de fin
+•	Taller
+•	Costo
+•	Descripción
+
+1.5 Entidad: Combustible
+Atributos:
+•	ID_Combustible (PK)
+•	Vehículo (FK)
+•	Fecha
+•	Cantidad de combustible
+•	Costo
+•	Lugar de carga
+
+1.6 Entidad: Seguro
+Atributos:
+•	ID_Seguro (PK)
+•	Vehículo (FK)
+•	Póliza
+•	Fecha de vencimiento
+•	Compañía aseguradora
+
+1.7 Entidad: Neumático
+Atributos:
+•	ID_Neumático (PK)
+•	Vehículo (FK)
+•	Posición (delantero izquierdo, trasero derecho, etc.)
+•	Fecha de instalación
+•	Kilometraje actual
+•	Estado (nuevo, medio uso, desgastado)
+
