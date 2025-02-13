@@ -1,0 +1,35 @@
+Definición de las relaciones entre las entidades
+
+--Relaciones principales
+1) Vehículo - Conductor:
+   Relación: Muchos a muchos (un conductor puede manejar varios vehículos, y un vehículo puede ser conducido por varios conductores).
+
+   Tabla intermedia: Asignación_Conductor_Vehículo
+	Atributos:
+	ID_Asignación (PK)
+	Matrícula (FK)
+	DNI/NIE (FK)
+	Fecha de asignación
+2) Vehículo - Ruta:
+   Relación: Uno a muchos (un vehículo puede realizar varias rutas, pero una ruta está asociada a un solo vehículo).
+   Atributo clave: Matrícula (FK) en la entidad Ruta.
+
+3) Conductor - Ruta:
+   Relación: Uno a muchos (un conductor puede realizar varias rutas, pero una ruta está asociada a un solo conductor).
+   Atributo clave: DNI/NIE (FK) en la entidad Ruta.
+
+4) Vehículo - Mantenimiento:
+   Relación: Uno a muchos (un vehículo puede tener múltiples registros de mantenimiento, pero cada registro de mantenimiento está asociado a un solo vehículo).
+   Atributo clave: Matrícula (FK) en la entidad Mantenimiento.
+
+5) Vehículo - Combustible:
+   Relación: Uno a muchos (un vehículo puede tener múltiples registros de consumo de combustible, pero cada registro está asociado a un solo vehículo).
+   Atributo clave: Matrícula (FK) en la entidad Combustible.
+
+6) Vehículo - Seguro:
+   Relación: Uno a uno (un vehículo tiene una póliza de seguro asociada).
+   Atributo clave: Matrícula (FK) en la entidad Seguro.
+
+7) Vehículo - Neumático:
+   Relación: Uno a muchos (un vehículo puede tener múltiples neumáticos registrados, pero cada neumático está asociado a un solo vehículo).
+   Atributo clave: Matrícula (FK) en la entidad Neumático.
